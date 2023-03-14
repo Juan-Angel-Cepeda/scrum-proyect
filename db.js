@@ -1,5 +1,13 @@
 const Sequelize = require('sequelize');
-//importar modelos para la DB
+const boardModel = require('./models/board');
+const columnModel = require('./models/column');
+const product_backlogModel = require('./models/product_backlog');
+const proyect_expedientModel = require('./models/proyect_expedient');
+const release_backlogModel = require('./models/release_backlog');
+const spring_backlogModel = require('./models/spring_backlog');
+const team_memberModelModel = require('./models/team_member');
+const user_histroyModel = require('./models/user_history');
+
 
 const sequelize = new Sequelize('scrum_proyect',
 'root','secret',{
@@ -12,9 +20,9 @@ const sequelize = new Sequelize('scrum_proyect',
 const Board = boardModel(sequelize,Sequelize);
 const Column = columnModel(sequelize,Sequelize);
 const Product_backlog = product_backlogModel(sequelize,Sequelize);
-const Proyec_expedient = product_expedientModel(sequelize,Sequelize);
+const Proyec_expedient = proyect_expedientModel(sequelize,Sequelize);
 const Release_backlog = release_backlogModel(sequelize,Sequelize);
-const Spring_backlog = release_backlogModel(sequelize,Sequelize);
+const Spring_backlog = spring_backlogModel(sequelize,Sequelize);
 const Team_member = team_memberModelModel(sequelize,Sequelize);
 const User_history = user_histroyModel(sequelize,Sequelize);
 
