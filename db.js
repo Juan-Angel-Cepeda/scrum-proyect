@@ -8,6 +8,8 @@ const spring_backlogModel = require('./models/spring_backlog');
 const team_memberModelModel = require('./models/team_member');
 const user_histroyModel = require('./models/user_history');
 const userModel = require('./models/user');
+const retrospectiveModel = require('./models/retrospective');
+const cardModel = require('./models/card');
 
 
 const sequelize = new Sequelize('scrum_proyect',
@@ -27,6 +29,8 @@ const Spring_backlog = spring_backlogModel(sequelize,Sequelize);
 const Team_member = team_memberModelModel(sequelize,Sequelize);
 const User_history = user_histroyModel(sequelize,Sequelize);
 const User = userModel(sequelize,Sequelize);
+const Retrospective = retrospectiveModel(sequelize,Sequelize);
+const Card = cardModel(sequelize,Sequelize);
 
 sequelize.sync({
     force:true,
@@ -38,5 +42,5 @@ sequelize.sync({
 
 module.exports = {Board,Column,Product_backlog,
                 Proyect_record, Release_backlog,Spring_backlog,
-            Team_member,User_history,User};
+            Team_member,User_history,User,Retrospective,Card};
  
