@@ -4,8 +4,8 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+const indexRouter = require('./routes/index');
+const usersRouter = require('./routes/users');
 //variables de rutas
 
 const boardsRouter = require('./routes/boards');
@@ -31,6 +31,14 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/user_histories', user_historiesRouter);
+app.use('/boards', boardsRouter);
+app.use('/columns', columnsRouter);
+app.use('/product_backlogsRouter',product_backlogsRouter);
+app.use('/proyect_expedients',proyect_expedientsRouter);
+app.use('/release_backlogs',release_backlogsRouter);
+app.use('/spring_backlogs',springs_backlogRouter);
+app.use('/team_members',team_membersRouter);
 
 
 

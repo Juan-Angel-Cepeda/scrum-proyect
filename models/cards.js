@@ -1,7 +1,8 @@
-const { User_history } = require("../db");
+const { Cards } = require("../db");
 module.exports = (sequelize, type) => {
-    const User_history = sequelize.define('user_histories', {
+    const Cards = sequelize.define('user_histories', {
       id: {type: type.INTEGER, primaryKey:true, autoIncrement:true},
+      id: type.INTEGER,
       name: type.STRING,
       lastName: type.STRING,
       rol: type.STRING,
@@ -12,7 +13,7 @@ module.exports = (sequelize, type) => {
       result: type.ARRAY(STRING),
       status: type.BOOLEAN,
       columna: type.INTEGER,
-      id: type.INTEGER,
+      
       contexto: type.STRING
 
     });
