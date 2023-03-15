@@ -1,5 +1,5 @@
 const express = require('express');
-const {Column} = require('../db');
+const {Proyect_record} = require('../db');
 
 function list(req,res,next){
     

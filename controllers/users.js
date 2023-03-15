@@ -1,9 +1,32 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const {User} = require('../db');
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+function list(req,res,next){
+    
+}
 
-module.exports = router;
+function index(req,res,next){
+
+}
+
+function create(req,res,next){
+
+}
+function replace(req,res,next){
+
+}
+function update(req,res,next){
+
+}
+function destroy(req,res,next){
+
+}
+
+module.exports = {
+    list,
+    index,
+    create,
+    replace,
+    update,
+    destroy
+}
