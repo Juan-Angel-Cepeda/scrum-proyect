@@ -2,7 +2,7 @@ const Sequelize = require('sequelize');
 const boardModel = require('./models/board');
 const columnModel = require('./models/column');
 const product_backlogModel = require('./models/product_backlog');
-const proyect_expedientModel = require('./models/proyect_expedient');
+const proyect_recordModel = require('./models/proyect_record');
 const release_backlogModel = require('./models/release_backlog');
 const spring_backlogModel = require('./models/spring_backlog');
 const team_memberModelModel = require('./models/team_member');
@@ -21,7 +21,7 @@ const sequelize = new Sequelize('scrum_proyect',
 const Board = boardModel(sequelize,Sequelize);
 const Column = columnModel(sequelize,Sequelize);
 const Product_backlog = product_backlogModel(sequelize,Sequelize);
-const Proyect_expedient = proyect_expedientModel(sequelize,Sequelize);
+const Proyect_record = proyect_recordModel(sequelize,Sequelize);
 const Release_backlog = release_backlogModel(sequelize,Sequelize);
 const Spring_backlog = spring_backlogModel(sequelize,Sequelize);
 const Team_member = team_memberModelModel(sequelize,Sequelize);
@@ -37,6 +37,6 @@ sequelize.sync({
 });
 
 module.exports = {Board,Column,Product_backlog,
-                Proyect_expedient, Release_backlog,Spring_backlog,
+                Proyect_record, Release_backlog,Spring_backlog,
             Team_member,User_history,User};
  
