@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const controller = require('../controllers/user_histories');
+const controller = require('../controllers/proyect_expedients');
 
 router.get('/', controller.list);
 
