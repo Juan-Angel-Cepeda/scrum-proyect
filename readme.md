@@ -20,3 +20,6 @@
 ## npm run dev
 
 ## Esto para entrar en el modo desarrollador, que nos permite interactuar con el programa a traves de postman o insomnia. Despues de esto podemos interactuar con el programa a travez de los metodos REST a conveniencia del usuario.
+
+# DockerHub imagen
+## https://hub.docker.com/u/jangelcepeda 
